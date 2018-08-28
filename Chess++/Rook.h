@@ -3,8 +3,9 @@
 class Rook :
 	public Piece
 {
-public:
-	Rook();
-	~Rook();
+	public:
+		Rook(int x, int y, Alliance alliance);
+		~Rook();
+		std::set<Location> calculateLegalMoves(Board board) override;
 };
 

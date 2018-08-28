@@ -3,8 +3,9 @@
 class Bishop :
 	public Piece
 {
-public:
-	Bishop();
-	~Bishop();
+	public:
+		Bishop(int x, int y, Alliance alliance);
+		~Bishop();
+		std::set<Location> calculateLegalMoves(Board board) override;
 };
 

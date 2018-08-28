@@ -1,7 +1,8 @@
 #pragma once
-#include <stdlib.h>
 #include "Board.h"
 #include "Piece.h"
+#include "Location.h"
+#include <set>
 
 enum Alliance {
 	WHITE = 0,
@@ -10,14 +11,25 @@ enum Alliance {
 
 class Piece
 {
-	Alliance pieceAlliance;
-	int x;
-	int y;
+	protected:
+		Alliance alliance;
+
+		Location location;
 
 	public:
-		Piece();
-		~Piece();
+		Piece(int x, int y, Alliance alliance);
+		virtual ~Piece();
 
-		virtual bool** calculateLegalMoves(Board board, int x, int y, Alliance alliance) = 0;
+		virtual std::set<Location> calculateLegalMoves(Board board) = 0;
+		void move(Location* newLocation);
+
+		Alliance getAlliance();
+		int getX();
+		int getY();
+
+	private:
+		void setAlliance(Alliance alliance);
+		void setX(int x);
+		void setY(int y);
 };
 
