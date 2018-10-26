@@ -13,5 +13,13 @@ Bishop::~Bishop()
 
 std::set<Location> Bishop::calculateLegalMoves(Board board)
 {
-	return std::set<Location>();
+	std::set<Location> moves;
+
+	for (int i = 1; i < COLUMNS; i++)
+	{
+		moves.insert(Location{ ((location.x + i) % COLUMNS + COLUMNS) % COLUMNS, ((location.y + i) % ROWS + ROWS) % ROWS });
+		moves.insert(Location{ ((location.x + i) % COLUMNS + COLUMNS) % COLUMNS, ((location.y - i) % ROWS + ROWS) % ROWS });
+	}
+
+	return moves;
 }
