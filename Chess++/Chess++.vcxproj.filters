@@ -60,6 +60,9 @@
     <ClCompile Include="Bishop.cpp">
       <Filter>Source Files\Pieces</Filter>
     </ClCompile>
+    <ClCompile Include="Location.cpp">
+      <Filter>Source Files\Board</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bishop.h">
@@ -90,6 +93,9 @@
       <Filter>Header Files\Board</Filter>
     </ClInclude>
     <ClInclude Include="Tile.h">
+      <Filter>Header Files\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="Location.h">
       <Filter>Header Files\Board</Filter>
     </ClInclude>
   </ItemGroup>

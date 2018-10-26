@@ -4,7 +4,8 @@ class Queen :
 	public Piece
 {
 public:
-	Queen();
+	Queen(int x, int y, Alliance alliance);
 	~Queen();
+	std::set<Location> calculateLegalMoves(Board board) override;
 };
 

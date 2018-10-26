@@ -4,7 +4,8 @@ class King :
 	public Piece
 {
 public:
-	King();
+	King(int x, int y, Alliance alliance);
 	~King();
+	std::set<Location> calculateLegalMoves(Board board) override;
 };
 
