@@ -17,7 +17,8 @@ Piece::~Piece()
 
 void Piece::move(Location* newLocation)
 {
-	location = *newLocation;
+	setX(newLocation->x);
+	setY(newLocation->y);
 }
 
 Alliance Piece::getAlliance()
@@ -42,10 +43,18 @@ void Piece::setAlliance(Alliance alliance)
 
 void Piece::setX(int x)
 {
+	if (x > COLUMNS - 1 || x < 0)
+	{
+		throw "Attempted to set invalid x position";
+	}
 	this->location.x = x;
 }
 
 void Piece::setY(int y)
 {
+	if (y > ROWS - 1 || y < 0)
+	{
+		throw "Attempted to set invalid y position";
+	}
 	this->location.y = y;
 }

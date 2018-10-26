@@ -14,7 +14,7 @@ Knight::~Knight()
 std::set<Location> Knight::calculateLegalMoves(Board board)
 {
 	// Knights move in L's at +-2 and +-1 for each value
-	std::set<Location> candidates = {
+	Location candidates[8] = {
 		{ location.x - 2, location.y - 1},
 		{ location.x - 2, location.y + 1},
 		{ location.x - 1, location.y - 2},
@@ -25,14 +25,15 @@ std::set<Location> Knight::calculateLegalMoves(Board board)
 		{ location.x + 2, location.y + 1}
 	};
 
-	for (Location candidate : candidates)
+	std::set<Location> moves;
+	for (auto candidate : candidates)
 	{
-		if (candidate.x < 0 || candidate.x > COLUMNS - 1 || candidate.y < 0 || candidate.y > ROWS - 1)
+		if (!(candidate.x < 0 || candidate.x > COLUMNS - 1 || candidate.y < 0 || candidate.y > ROWS - 1))
 		{
-			candidates.erase(candidate);
+			moves.insert(candidate);
 		}
 	}
 
-	return candidates;
+	return moves;
 }
 

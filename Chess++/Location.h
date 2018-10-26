@@ -10,4 +10,9 @@ struct Location
 	{
 		return (y * COLUMNS + x) < (o.y * COLUMNS + o.x);
 	}
+
+	bool operator == (const Location& o) const
+	{
+		return x == o.x && y == o.y;
+	}
 };
