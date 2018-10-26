@@ -41,5 +41,8 @@
     <ClCompile Include="RookTests.cpp">
       <Filter>Source Files\Pieces</Filter>
     </ClCompile>
+    <ClCompile Include="QueenTests.cpp">
+      <Filter>Source Files\Pieces</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
