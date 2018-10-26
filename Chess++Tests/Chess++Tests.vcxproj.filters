@@ -38,5 +38,8 @@
     <ClCompile Include="BishopTests.cpp">
       <Filter>Source Files\Pieces</Filter>
     </ClCompile>
+    <ClCompile Include="RookTests.cpp">
+      <Filter>Source Files\Pieces</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

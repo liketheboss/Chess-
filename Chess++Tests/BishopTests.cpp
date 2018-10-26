@@ -15,7 +15,7 @@ namespace ChessTests
 			auto moves = bishop.calculateLegalMoves(board);
 
 			Assert::AreEqual(13, static_cast<int>(moves.size()));
-			Assert::IsTrue(moves.count({ 0, 1 }));
+			Assert::IsTrue(moves.count(Location{ 0, 1 }));
 			Assert::IsTrue(moves.count({ 0, 7 }));
 			Assert::IsTrue(moves.count({ 1, 2 }));
 			Assert::IsTrue(moves.count({ 1, 6 }));

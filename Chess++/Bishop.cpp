@@ -17,8 +17,8 @@ std::set<Location> Bishop::calculateLegalMoves(Board board)
 
 	for (int i = 1; i < COLUMNS; i++)
 	{
-		moves.insert(Location{ ((location.x + i) % COLUMNS + COLUMNS) % COLUMNS, ((location.y + i) % ROWS + ROWS) % ROWS });
-		moves.insert(Location{ ((location.x + i) % COLUMNS + COLUMNS) % COLUMNS, ((location.y - i) % ROWS + ROWS) % ROWS });
+		moves.insert({ ((location.x + i) % COLUMNS + COLUMNS) % COLUMNS, ((location.y + i) % ROWS + ROWS) % ROWS });
+		moves.insert({ ((location.x + i) % COLUMNS + COLUMNS) % COLUMNS, ((location.y - i) % ROWS + ROWS) % ROWS });
 	}
 
 	return moves;
