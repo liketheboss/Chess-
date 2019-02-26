@@ -17,7 +17,7 @@ class MoveGen
     Bitboard getBishopMoves(Bitboard position, bool isWhite, Board *board);
     Bitboard getRookMoves(Bitboard position, bool isWhite, Board *board);
     Bitboard getQueenMoves(Bitboard position, bool isWhite, Board *board);
-    Bitboard getKnightMoves(Bitboard position, bool isWhite, Board *board);
+    Bitboard getKingMoves(Bitboard position, bool isWhite, Board *board);
 };
 
 #endif
