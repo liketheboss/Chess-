@@ -20,6 +20,8 @@ class Board
     Board(const Bitboard copyPieces[PieceCount]);
     ~Board();
     Bitboard getPieces(PieceType pt);
+    Bitboard getAllPieces();
+    Bitboard getEnPessant(); // Holds enpessant-able location if pawn double pushed in last move
 };
 
 #endif
