@@ -1,4 +1,6 @@
-#pragma once
+#ifndef BASE_BITBOARDS_H
+#define BASE_BITBOARDS_H
+
 #include <cstdint>
 
 typedef uint64_t Bitboard;
@@ -33,3 +35,5 @@ const Bitboard RANK8 = RANK1 << (8 * 7);
 const Bitboard ALLSQUARES   = 0xFFFFFFFFFFFFFFFF;
 const Bitboard EMPTY = 0;
 const Bitboard DARKSQUARES  = 0xAA55AA55AA55AA55;
+
+#endif

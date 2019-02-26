@@ -1,4 +1,6 @@
-#pragma once
+#ifndef PIECE_TYPE_H
+#define PIECE_TYPE_H
+
 enum PieceType
 {
 	All,
@@ -18,3 +20,5 @@ enum PieceType
 	BlackKing,
 	PieceCount
 };
+
+#endif

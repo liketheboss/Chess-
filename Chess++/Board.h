@@ -1,5 +1,9 @@
-#pragma once
+#ifndef BOARD_H
+#define BOARD_H
+
+
 #include <cstdint>
+#include "BaseBitboards.h"
 #include "PieceType.h"
 
 const int ROWS = 8;
@@ -7,13 +11,15 @@ const int COLUMNS = 8;
 
 class Board
 {
-	private:
-		uint64_t pieceBoard[PieceCount]{};
+  private:
+    Bitboard pieces[PieceCount]{};
+    void initBoard();
 
-	public:
-		Board();
-		Board(const uint64_t pieceBoard[PieceCount]);
-		~Board();
-		uint64_t getPieces(PieceType pt);
+  public:
+    Board();
+    Board(const Bitboard copyPieces[PieceCount]);
+    ~Board();
+    Bitboard getPieces(PieceType pt);
 };
 
+#endif
