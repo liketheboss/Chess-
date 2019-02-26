@@ -9,10 +9,10 @@ namespace ChessTests
 	TEST_CLASS(QueenTests) {
 		TEST_METHOD(TestCalculateLegalMoves)
 		{
-			Queen bishop = Queen(3, 4, WHITE);
+			Queen queen = Queen(3, 4, WHITE);
 			const auto board = Board();
 
-			auto moves = bishop.calculateLegalMoves(board);
+			auto moves = queen.calculateLegalMoves(board);
 
 			Assert::AreEqual(27, static_cast<int>(moves.size()));
 			Assert::IsTrue(moves.count({ 0, 1 }));

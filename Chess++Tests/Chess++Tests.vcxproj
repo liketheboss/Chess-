@@ -160,6 +160,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BishopTests.cpp" />
+    <ClCompile Include="KingTests.cpp" />
+    <ClCompile Include="PawnTests.cpp" />
     <ClCompile Include="PieceTests.cpp" />
     <ClCompile Include="QueenTests.cpp" />
     <ClCompile Include="RookTests.cpp" />
