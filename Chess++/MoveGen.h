@@ -3,6 +3,7 @@
 
 #include "BaseBitboards.h"
 #include "Board.h"
+#include "MagicMoves.hpp"
 
 class MoveGen
 {
@@ -12,12 +13,12 @@ class MoveGen
   public:
     MoveGen();
     ~MoveGen();
-    Bitboard getPawnMoves(Bitboard position, bool isWhite, Board *board);
-    Bitboard getKnightMoves(Bitboard position, bool isWhite, Board *board);
-    Bitboard getBishopMoves(Bitboard position, bool isWhite, Board *board);
-    Bitboard getRookMoves(Bitboard position, bool isWhite, Board *board);
-    Bitboard getQueenMoves(Bitboard position, bool isWhite, Board *board);
-    Bitboard getKingMoves(Bitboard position, bool isWhite, Board *board);
+    Bitboard getPawnMoves(unsigned short position, bool isWhite, Board *board);
+    Bitboard getKnightMoves(unsigned short position, bool isWhite, Board *board);
+    Bitboard getBishopMoves(unsigned short position, bool isWhite, Board *board);
+    Bitboard getRookMoves(unsigned short position, bool isWhite, Board *board);
+    Bitboard getQueenMoves(unsigned short position, bool isWhite, Board *board);
+    Bitboard getKingMoves(unsigned short position, bool isWhite, Board *board);
 };
 
 #endif

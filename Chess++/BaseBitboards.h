@@ -1,6 +1,8 @@
 #ifndef BASE_BITBOARDS_H
 #define BASE_BITBOARDS_H
 
+#define __64_BIT_INTEGER_DEFINED__
+
 #include <cstdint>
 
 typedef uint64_t Bitboard;
